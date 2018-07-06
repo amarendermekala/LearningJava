@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.function.BinaryOperator;
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 public class ReadingFiles {
@@ -27,13 +29,16 @@ public class ReadingFiles {
         }
         // reader.lines
 
-
         Path path = Paths.get("D:", "tmp", "path.txt");
         try(Stream<String> lines = Files.lines(path)) {
             lines.filter(line -> line.contains("Hi")).findFirst().ifPresent(System.out::println);
         } catch(IOException e) {
 
         }
+
+        Predicate<String> isStringLengthGreaterThan20 = s -> s.length() > 20;
+        Predicate<String> p2 = s -> s.length() < 10;
+        // isStringLengthGreaterThan20.test("asdsad") && p2.test().and(isStringLengthGreaterThan20.test("3"));
         // Files.lines
 
         // Stream implement AutoCloseable, and will close the underlying file.
