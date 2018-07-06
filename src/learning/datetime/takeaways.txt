@@ -1,0 +1,53 @@
+Java 7
+-------------------------------
+One class java.util.Date
+
+
+
+Instant
+------------------------
+
+Instant is point on a timeline
+Instant 0 is Jan1, 1970 GMT
+Instant.MIN 1 billion years ago
+Instant.MAX 1 billion years after
+Instant.now is current instant
+
+Precision to nanosecond
+
+Immutable
+
+
+Duration
+---------------------------
+amount of time between instants
+toNanos, toSeconds, toDays etc..
+minusNanos
+plusNanos
+multipliedBy, negated
+isZero, isNegative
+
+LocalDate
+--------------------------
+Where Date is not an instant, just date (year, month, date)
+
+Period
+--------------------------
+Amount of time between local dates
+
+TemporalAdjusters
+-----------------------------
+DateAdjuster
+Useful to add an amount of time to an Instant or a LocalDate
+
+LocalTime
+------------------------
+Local Time of a day
+
+ZonedTime
+--------------------------
+DateTime including zone information
+
+DateFormatters
+----------------------------
+Formatting a date
