@@ -1,0 +1,31 @@
+Streams
+---------------------------
+Map - Maps one object to other
+
+Filter - filters out few objects based on some criteria
+
+Reduce - Reduces the final result into some result based on reduce operation, SQL aggregation - count, min, max
+
+What is a Stream ?
+Stream is a java typed interface
+Stream<T> extends BaseStream<T, Stream<T>>
+
+WHAT DOES IT DO ?
+Can process large and small amount of data efficiently
+
+1. Parallelly processed, leverage computing power of multi core CPUs
+2. Pipelined, to avoid unnecessary intermediary operations
+
+Why can't collection be a stream ?
+1. We don't want to change the way collection works
+
+Stream is object on which we can perform operations
+Object that does not hold data
+Object that should not change the data it processes, since parallel
+Object that can process data in one pass
+Object optimized from the algorithm point of view
+
+
+
+
+
